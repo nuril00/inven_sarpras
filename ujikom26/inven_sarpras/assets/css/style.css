@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #f4f7f9;
+    --sidebar-bg: #ffffff;
+    --primary-color: #0ea5e9; 
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    height: calc(100vh - 30px);
+    background: var(--sidebar-bg);
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    border-radius: 20px;
+    padding: 24px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    z-index: 1000;
+    border: 1px solid #f1f5f9;
+}
+.sidebar-brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sidebar-menu { list-style: none; padding: 0; margin: 0; }
+.sidebar-menu li { margin-bottom: 8px; }
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+.sidebar-menu a i { font-size: 1.2rem; margin-right: 12px; }
+.sidebar-menu a:hover, .sidebar-menu a.active {
+    background-color: #f0f9ff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Konten */
+.main-content {
+    margin-left: 290px;
+    padding: 20px 30px 30px 15px;
+}
+
+/* Navbar Top */
+.navbar-top {
+    background: transparent;
+    padding: 10px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Kartu */
+.card-custom {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    height: 100%;
+}
+.card-custom h5 { font-weight: 700; color: var(--text-dark); margin-bottom: 15px; }
+
+/* Tabel */
+.table-custom th {
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    background: transparent;
+}
+.table-custom td {
+    padding: 15px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f8fafc;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.table-custom tr:last-child td { border-bottom: none; }
+
+/* Tombol & Badge */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+.btn-primary:hover { background-color: #0284c7; }
+
+.badge-soft-warning { background: #fef3c7; color: #b45309; padding: 8px 14px; border-radius: 20px; font-weight: 600; font-size: 0.75rem; }
+.badge-soft-success { background: #dcfce7; color: #15803d; padding: 8px 14px; border-radius: 20px; font-weight: 600; font-size: 0.75rem; }
+.badge-soft-primary { background: #e0f2fe; color: #0369a1; padding: 8px 14px; border-radius: 20px; font-weight: 600; font-size: 0.75rem; }
+
+/* Form & Modal */
+.form-control, .form-select { border-radius: 10px; padding: 12px 15px; border: 1px solid var(--border-color); }
+.form-control:focus, .form-select:focus { box-shadow: none; border-color: var(--primary-color); }
+.modal-content { border-radius: 20px; border: none; }
+.modal-header { border-bottom: 1px solid #f1f5f9; padding: 20px 24px; }
+.modal-body { padding: 24px; }
+.modal-footer { border-top: 1px solid #f1f5f9; padding: 20px 24px; }
